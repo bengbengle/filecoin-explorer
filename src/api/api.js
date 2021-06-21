@@ -1,7 +1,7 @@
 function getApiUrl (path) {
   // Setting the API_URL to '/' results in a 'http://api' call because all paths start with '/'.
   // If our API_URL is '/' we want to be making requests at our root, so we drop the extra
-  const api_url = process.env.REACT_APP_API_URL == '/' ? '' : process.env.REACT_APP_API_URL
+  const api_url = process.env.REACT_APP_API_URL === '/' ? '' : process.env.REACT_APP_API_URL
   const url = `${api_url}${path}`
   return url
 }
